@@ -9,6 +9,7 @@
         "net451": { }
     },
     "dependencies": {
-        "EntityFramework": "6.1.3"
+        "EntityFramework": "6.1.3",
+        "Odasoft.mPlay.Models": "1.0.0-*"
     }
 }
