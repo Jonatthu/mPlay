@@ -15,6 +15,7 @@ namespace Odasoft.mPlay.Models.Mappings
             Property(x => x.Length).IsRequired();
             Property(x => x.Price).IsRequired();
             Property(x => x.Title).HasMaxLength(40);
+            Property(x => x.Description).HasMaxLength(255);
             this.ToTable("Articles");
         }
     }
