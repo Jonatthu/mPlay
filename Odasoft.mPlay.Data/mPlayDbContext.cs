@@ -34,7 +34,7 @@ namespace Odasoft.mPlay.Data
                 .Configure(c => c.HasColumnType("datetime2"));
 
             //Add always the mappings that you created
-            modelBuilder.Configurations.Add(new ArticleMapping());
+            modelBuilder.Configurations.Add(new ArticleMap());
 
         }
 }

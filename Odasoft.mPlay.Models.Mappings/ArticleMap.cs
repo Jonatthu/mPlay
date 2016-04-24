@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Odasoft.mPlay.Models.Mappings
 {
-    public class ArticleMapping : EntityTypeConfiguration<Article>
+    public class ArticleMap : EntityTypeConfiguration<Article>
     {
-        public ArticleMapping()
+        public ArticleMap()
         {
             HasKey(x => x.Id);
             Property(x => x.Image).IsRequired();
