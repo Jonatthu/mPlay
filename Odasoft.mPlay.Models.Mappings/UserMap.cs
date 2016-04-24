@@ -15,11 +15,8 @@ namespace Odasoft.mPlay.Models.Mappings
             Property(x => x.Name).IsRequired();
             Property(x => x.Email).IsRequired();
             Property(x => x.Password).IsRequired();
-
-            #region  ForeignKeys
-            public int CartId { get; set; }
-            #endregion
-
+            Property(x => x.CartId).IsRequired();
+            this.ToTable("Users");
+        }
     }
-}
 }
