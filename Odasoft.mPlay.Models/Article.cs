@@ -16,7 +16,5 @@ namespace Odasoft.mPlay.Models
         public string Description { get; set; }
         public string Length { get; set; }
         public string Image { get; set; }
-       
-
     }
 }

@@ -15,13 +15,12 @@ namespace Odasoft.mPlay.Models.Mappings
             Property(x => x.Title).HasMaxLength(40);
             Property(x => x.Author).IsOptional();
             Property(x => x.ReleaseDate).IsRequired();
+            //We don't need to write the optional properties 
             Property(x => x.Genre).IsOptional();
-            Property(x => x.Price).IsRequired();
+            Property(x => x.Price).IsRequired(); 
             Property(x => x.Description).IsOptional();
             Property(x => x.Length).IsRequired();
             Property(x => x.Image).IsRequired();
-            //Aqui faltaria poner la lista de las canciones
-            //Pero aun necesito investigar como
             this.ToTable("Albums");
         }
     }
