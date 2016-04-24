@@ -7,6 +7,14 @@ namespace Odasoft.mPlay.Models
 {
     public class Album : Article
     {
-        public ICollection<Song> List { get; set; }
+
+        public virtual ICollection<Song> SongList { get; set; }
+
+        public Album()
+        {
+            SongList = new List<Song>();
+        }
+
+       
     }
 }
