@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace Odasoft.mPlay.Models.Mappings
 {
-    public class ArticleMapping : EntityTypeConfiguration<Article>
+    public class ArticleMap : EntityTypeConfiguration<Article>
     {
-        public ArticleMapping()
+        public ArticleMap()
         {
             HasKey(x => x.Id);
             Property(x => x.Image).IsRequired();
             Property(x => x.Length).IsRequired();
             Property(x => x.Price).IsRequired();
             Property(x => x.Title).HasMaxLength(40);
+            Property(x => x.Description).HasMaxLength(255);
             this.ToTable("Articles");
         }
     }

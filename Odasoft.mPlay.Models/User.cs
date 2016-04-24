@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 
 namespace Odasoft.mPlay.Models
 {
-    public class Song
+    public class User
     {
         public int Id { get; set; }
-        public virtual Album Album { get; set; }
-        public string SongName { get; set; }
-        public string SongLength { get; set; }
+        public string UserName { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
 
         #region  ForeignKeys
-        public int AlbumId { get; set; }
+        public int CartId { get; set; }
         #endregion
-
     }
 }
