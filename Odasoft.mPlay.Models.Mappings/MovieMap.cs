@@ -19,7 +19,7 @@ namespace Odasoft.mPlay.Models.Mappings
             Property(x => x.Description).IsRequired();
             Property(x => x.Length).IsRequired();
             Property(x => x.Image).IsRequired();
-            this.ToTable("Movie");
+            this.ToTable("Movies");
         }
     }
 }
