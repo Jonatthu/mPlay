@@ -7,6 +7,6 @@ namespace Odasoft.mPlay.Models
 {
     public class Movie : Article
     {
-        
+
     }
 }

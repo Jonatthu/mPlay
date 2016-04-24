@@ -8,7 +8,11 @@ namespace Odasoft.mPlay.Models
     public class ShoppingCart
     {
 
-        public ShoppingCart() { }
+        public ShoppingCart()
+        {
+            AlbumList = new List<Album>();
+            MovieList = new List<Movie>();
+        }
 
         public int Id { get; set; }
         public ICollection<Album> AlbumList { get; set;}
