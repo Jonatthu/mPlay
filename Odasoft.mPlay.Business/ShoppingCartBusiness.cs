@@ -43,5 +43,28 @@ namespace Odasoft.mPlay.Business
             return items;
         }
 
+        public ICollection<Movie> GetShoppingCartMoviesById(int Id)
+        {
+            var movies = new List<Movie>();
+            movies.Add(new Movie
+            {
+                Id = 1,
+                Title = "Titanic",
+                Author = "Bla BLa",
+                ReleaseDate = DateTime.Now,
+                Genre = "Romantic",
+                Price = 45,
+                Description = "Titanic sinks",
+                Length = "2:45",
+                Image = "URL"
+
+            });
+
+            return movies;
+        }
+
+
     }
+
+    
 }
