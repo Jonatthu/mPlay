@@ -3,7 +3,6 @@
 ################################################################################
 
 /Odasoft.mPlay.Web/node_modules
-/.vs
 /artifacts
 /Odasoft.mPlay.Business/bin/Debug
 /Odasoft.mPlay.Business/obj/Debug
@@ -15,4 +14,3 @@
 /Odasoft.mPlay.Models.Mappings/obj/Debug
 *.user
 /packages
-/wrap
