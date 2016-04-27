@@ -15,7 +15,7 @@ namespace Odasoft.mPlay.Business
 
         }
          
-        public ICollection<Song> GetSongById(int AlbumId)
+        public ICollection<Song> GetSongs()
         {
             var songs = new List<Song>();
 
@@ -54,10 +54,45 @@ namespace Odasoft.mPlay.Business
             return songs;
         }
 
-        /*public ICollection<Song> EditSongById(Song model)
+        public Song GetSongById(int SongId)
         {
+            return new Song()
+            {
+                AlbumId = 1,
+                Id = 1,
+                SongLength = "4:50",
+                SongName = "8 Mile"
+            };
+        }
 
-        }*/
+        public Song CreateSong(Song model)
+        {
+            return new Song()
+            {
+                Id = 1,
+                SongName = "Mockingbird",
+                SongLength = "5:00",
+                AlbumId = 1
+        };
+        }
+
+        public Song EditSong(Song model)
+        {
+            return new Song()
+            {
+                AlbumId = 1,
+                Id = 1,
+                SongLength = "4:50",
+                SongName = "8 Mile"
+            };
+    }
+
+        public void DeleteSongById(int SongId)
+        {
+            //Delete option
+        }
 
     }
 }
+
+
