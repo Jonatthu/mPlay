@@ -26,7 +26,7 @@ namespace Odasoft.mPlay.Business
         }
         public Album GetAlbumById(int AlbumId)
         {
-            var Album = new Album({
+            var Album = new Album{
                 
                 Author = "Me",
                 Description = "Great Album",
@@ -34,7 +34,7 @@ namespace Odasoft.mPlay.Business
                 Id = 1,
                 Image = "Hello World",
                 Length = "04:05"
-            });
+            };
 
             return Album;
         }
