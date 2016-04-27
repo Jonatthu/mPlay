@@ -12,6 +12,5 @@ namespace Odasoft.mPlay.Models
             this.ShoppingCarts = new HashSet<ShoppingCart>();
         }
         public virtual ICollection<ShoppingCart> ShoppingCarts { get; set; }
-
     }
 }

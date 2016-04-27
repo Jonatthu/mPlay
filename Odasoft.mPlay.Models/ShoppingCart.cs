@@ -15,8 +15,8 @@ namespace Odasoft.mPlay.Models
         }
 
         public int Id { get; set; }
-        public ICollection<Album> AlbumList { get; set;}
-        public ICollection<Movie> MovieList { get; set; }
+        public virtual ICollection<Album> AlbumList { get; set;}
+        public virtual ICollection<Movie> MovieList { get; set; }
         public float TotalPrice { get; set; }
         public virtual User User { get; set; }
 

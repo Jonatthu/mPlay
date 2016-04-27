@@ -11,9 +11,10 @@ namespace Odasoft.mPlay.Models
         public Album()
         {
             Songs = new List<Song>();
-            this.ShoppingCarts = new HashSet<ShoppingCart>();
+            ShoppingCarts = new HashSet<ShoppingCart>();
+            //to let the mapping know it is a one to many relationship
         }
-
+        
         public virtual ICollection<Song> Songs { get; set; }
 
         public virtual ICollection<ShoppingCart> ShoppingCarts { get; set; }

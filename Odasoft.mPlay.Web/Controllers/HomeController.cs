@@ -10,16 +10,19 @@ namespace Odasoft.mPlay.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ShoppingCartBusiness _ShoppingCartBusiness;
+        private readonly AlbumBusiness _AlbumBusiness;
 
-        public HomeController(ShoppingCartBusiness ShoppingCartBusiness)
+        public HomeController(ShoppingCartBusiness ShoppingCartBusiness, AlbumBusiness AlbumBusiness)
         {
             this._ShoppingCartBusiness = ShoppingCartBusiness;
+            this._AlbumBusiness = AlbumBusiness;
         }
 
         [HttpGet]
         public JsonResult GetJson()
         {
             var result = _ShoppingCartBusiness.GetShoppingCartAlbumsById(1);
+            
             return Json(result);
         }
 

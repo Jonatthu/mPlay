@@ -7,27 +7,46 @@ using System.Threading.Tasks;
 
 namespace Odasoft.mPlay.Business
 {
-    class AlbumBusiness
+   public class AlbumBusiness
     {
         public AlbumBusiness()
         {
 
         }
 
-        public ICollection<Song> GetSongById(int Id)
+        public ICollection<Song> GetAlbumSongsById(int AlbumId)
         {
+            //The id parameter is from the Album Id
+
+            //This is what will actually come from the database
             var songs = new List<Song>();
-            songs.Add(new Song
+
+            for (int i = 0; i < 10; i++)
             {
-                Id = 1,
-                Album = new Album(),
-                SongName = "whatever",
-                SongLength = "4:10"
+                songs.Add(new Song
+                {
+                    Id = i,
+                    SongName = "whatever",
+                    SongLength = "4:10",
+                    AlbumId = i
+                });
+            }
+            //end of the database
 
-            });
+            List<Song> AlbumSongs = songs.FindAll(x => x.AlbumId == AlbumId);
 
-            return songs;
+            return AlbumSongs;
         }
+
+        public void DeleteAlbumSongById(int SongId)
+        {
+            Console.WriteLine("Song Deleted!");
+        }
+
+
+
+
+
     }
 
 }
