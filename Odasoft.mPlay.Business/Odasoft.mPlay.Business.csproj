@@ -48,10 +48,6 @@
     <Compile Include="UserBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Odasoft.mPlay.data\Odasoft.mPlay.Data.csproj">
-      <Project>{75b5acd2-7fac-4a1c-86d7-03d4ac939c10}</Project>
-      <Name>Odasoft.mPlay.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Odasoft.mPlay.Models\Odasoft.mPlay.Models.csproj">
       <Project>{f48dd179-0e25-4aab-828b-9f1dcca011aa}</Project>
       <Name>Odasoft.mPlay.Models</Name>
