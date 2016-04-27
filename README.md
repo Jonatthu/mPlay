@@ -1,2 +1,0 @@
-# mPlay
-Odasoft training project
