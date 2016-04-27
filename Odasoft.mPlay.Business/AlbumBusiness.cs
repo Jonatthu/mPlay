@@ -14,6 +14,31 @@ namespace Odasoft.mPlay.Business
 
         }
 
+        public ICollection<Album> GetAlbums()
+        {
+            var Albums = new List<Album>();
+            for (int i = 0; i < 10; i++)
+            {
+                Albums.Add(new Album());
+            }
+
+            return Albums;
+        }
+        public Album GetAlbumById(int AlbumId)
+        {
+            var Album = new Album{
+                
+                Author = "Me",
+                Description = "Great Album",
+                Genre = "Terror",
+                Id = 1,
+                Image = "Hello World",
+                Length = "04:05"
+            };
+
+            return Album;
+        }
+
         public ICollection<Song> GetAlbumSongsById(int AlbumId)
         {
             //The id parameter is from the Album Id
@@ -27,7 +52,7 @@ namespace Odasoft.mPlay.Business
                 {
                     Id = i,
                     SongName = "whatever",
-                    SongLength = "4:10",
+                    SongLength = "04:10",
                     AlbumId = i
                 });
             }
@@ -38,11 +63,51 @@ namespace Odasoft.mPlay.Business
             return AlbumSongs;
         }
 
+        public Album EditAlbum(Album Album)
+        {
+            Console.WriteLine("Album Edited");
+
+            return Album;
+
+        }
+
         public void DeleteAlbumSongById(int SongId)
         {
             Console.WriteLine("Song Deleted!");
         }
 
+        public string GetAlbumLengthById(int AlbumId)
+        {
+            int secondTotal = 0;
+            int minuteTotal = 0;
+            int hourTotal = 0;
+            string albumLength = " ";
+            ICollection<Song> songs = GetAlbumSongsById(AlbumId);
+
+
+            foreach (Song song in songs)
+            {
+                string str = song.SongLength;
+                string minutes = str.Substring(0, 3);
+                string seconds = str.Substring(4, 6);
+
+                int mins = Int32.Parse(minutes);
+                int secs = Int32.Parse(seconds);
+
+                minuteTotal += mins;
+                secondTotal += secs;
+
+                if (minuteTotal >= 60)
+                {
+                    hourTotal += 1;
+                    minuteTotal -= 60;
+                }
+
+            }
+            albumLength = hourTotal.ToString() + ":" + minuteTotal.ToString();
+
+            return albumLength;
+        }
 
 
 

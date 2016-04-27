@@ -23,7 +23,7 @@ namespace Odasoft.mPlay.Business
             {
                 Id = 1,
                 SongName = "Lose Yourself",
-                SongLength = "5:23",
+                SongLength = "05:23",
                 AlbumId = 1
             });
 
@@ -31,7 +31,7 @@ namespace Odasoft.mPlay.Business
             {
                 Id = 2,
                 SongName = "Not Afraid",
-                SongLength = "4:19",
+                SongLength = "04:19",
                 AlbumId = 2
             });
 
@@ -39,7 +39,7 @@ namespace Odasoft.mPlay.Business
             {
                 Id = 3,
                 SongName = "Without Me",
-                SongLength = "5:00",
+                SongLength = "05:00",
                 AlbumId = 3
             });
 
@@ -47,7 +47,7 @@ namespace Odasoft.mPlay.Business
             {
                 Id = 4,
                 SongName = "Rap God",
-                SongLength = "6:10",
+                SongLength = "06:10",
                 AlbumId = 4
             });
 
@@ -60,7 +60,7 @@ namespace Odasoft.mPlay.Business
             {
                 AlbumId = 1,
                 Id = 1,
-                SongLength = "4:50",
+                SongLength = "04:50",
                 SongName = "8 Mile"
             };
         }
@@ -71,7 +71,7 @@ namespace Odasoft.mPlay.Business
             {
                 Id = 1,
                 SongName = "Mockingbird",
-                SongLength = "5:00",
+                SongLength = "05:00",
                 AlbumId = 1
         };
         }
@@ -82,7 +82,7 @@ namespace Odasoft.mPlay.Business
             {
                 AlbumId = 1,
                 Id = 1,
-                SongLength = "4:50",
+                SongLength = "04:50",
                 SongName = "8 Mile"
             };
     }

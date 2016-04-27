@@ -28,10 +28,10 @@
 
   "frameworks": {
     "dnx46": {
-      "dependencies": {
-        "Odasoft.mPlay.Business": "1.0.0-*",
-        "Odasoft.mPlay.Models": "1.0.0-*"
-      }
+        "dependencies": {
+            "Odasoft.mPlay.Business": "1.0.0-*",
+            "Odasoft.mPlay.Models": "1.0.0-*"
+        }
     }
   },
 

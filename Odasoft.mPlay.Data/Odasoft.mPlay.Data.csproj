@@ -7,8 +7,8 @@
     <ProjectGuid>{75B5ACD2-7FAC-4A1C-86D7-03D4AC939C10}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Odasoft.mPlay.Data</RootNamespace>
-    <AssemblyName>Odasoft.mPlay.Data</AssemblyName>
+    <RootNamespace>Odasoft.mPlay.data</RootNamespace>
+    <AssemblyName>Odasoft.mPlay.data</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

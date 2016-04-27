@@ -3,7 +3,6 @@
 ################################################################################
 
 /Odasoft.mPlay.Web/node_modules
-/.vs
 /artifacts
 /Odasoft.mPlay.Business/bin/Debug
 /Odasoft.mPlay.Business/obj/Debug
@@ -11,8 +10,8 @@
 /Odasoft.mPlay.Data/obj/Debug
 /Odasoft.mPlay.Models/bin/Debug
 /Odasoft.mPlay.Models/obj/Debug
+/Odasoft.mPlay.Models/obj/Debug/Odasoft.mPlay.Models.csproj.FileListAbsolute.txt
 /Odasoft.mPlay.Models.Mappings/bin/Debug
 /Odasoft.mPlay.Models.Mappings/obj/Debug
 *.user
 /packages
-/wrap
