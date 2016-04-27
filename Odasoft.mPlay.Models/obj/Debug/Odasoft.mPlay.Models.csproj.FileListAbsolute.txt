@@ -1,0 +1,5 @@
+C:\Users\Jose Manuel\Source\Repos\mPlay\Odasoft.mPlay.Models\bin\Debug\Odasoft.mPlay.Models.dll
+C:\Users\Jose Manuel\Source\Repos\mPlay\Odasoft.mPlay.Models\bin\Debug\Odasoft.mPlay.Models.pdb
+C:\Users\Jose Manuel\Source\Repos\mPlay\Odasoft.mPlay.Models\obj\Debug\Odasoft.mPlay.Models.csprojResolveAssemblyReference.cache
+C:\Users\Jose Manuel\Source\Repos\mPlay\Odasoft.mPlay.Models\obj\Debug\Odasoft.mPlay.Models.dll
+C:\Users\Jose Manuel\Source\Repos\mPlay\Odasoft.mPlay.Models\obj\Debug\Odasoft.mPlay.Models.pdb
