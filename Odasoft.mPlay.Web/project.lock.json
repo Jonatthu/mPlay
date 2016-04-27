@@ -6876,7 +6876,7 @@
     },
     "SimpleInjector.Integration.AspNet/3.1.2-beta4": {
       "type": "package",
-      "sha512": "tSdOGBGrU/XNcIcGSWKr55O4E5YhMmswc6iC2C3tVcVJCh76txCkyAOCapESLfN6XX/bvy55KblMa7AcuafzUg==",
+      "sha512": "fyWCWZlP8F0GxBP1FW4iKae6uua0qdhSfe9GpnbCHcWYO49gzMXcUDc0WNem243lXwDF01L3Vm3BUW+07FwwOg==",
       "files": [
         "lib/dotnet5.4/SimpleInjector.Integration.AspNet.dll",
         "lib/dotnet5.4/SimpleInjector.Integration.AspNet.xml",

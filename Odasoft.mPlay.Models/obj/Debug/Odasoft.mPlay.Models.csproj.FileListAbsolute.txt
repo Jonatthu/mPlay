@@ -3,3 +3,8 @@ C:\Users\Jose Manuel\Source\Repos\mPlay\Odasoft.mPlay.Models\bin\Debug\Odasoft.m
 C:\Users\Jose Manuel\Source\Repos\mPlay\Odasoft.mPlay.Models\obj\Debug\Odasoft.mPlay.Models.csprojResolveAssemblyReference.cache
 C:\Users\Jose Manuel\Source\Repos\mPlay\Odasoft.mPlay.Models\obj\Debug\Odasoft.mPlay.Models.dll
 C:\Users\Jose Manuel\Source\Repos\mPlay\Odasoft.mPlay.Models\obj\Debug\Odasoft.mPlay.Models.pdb
+C:\Users\Gustavo\Source\Repos\mPlay\Odasoft.mPlay.Models\bin\Debug\Odasoft.mPlay.Models.dll
+C:\Users\Gustavo\Source\Repos\mPlay\Odasoft.mPlay.Models\bin\Debug\Odasoft.mPlay.Models.pdb
+C:\Users\Gustavo\Source\Repos\mPlay\Odasoft.mPlay.Models\obj\Debug\Odasoft.mPlay.Models.csprojResolveAssemblyReference.cache
+C:\Users\Gustavo\Source\Repos\mPlay\Odasoft.mPlay.Models\obj\Debug\Odasoft.mPlay.Models.dll
+C:\Users\Gustavo\Source\Repos\mPlay\Odasoft.mPlay.Models\obj\Debug\Odasoft.mPlay.Models.pdb
