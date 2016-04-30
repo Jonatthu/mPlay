@@ -24,7 +24,8 @@ namespace Odasoft.mPlay.Web.Controllers
         {
             //ICollection<Movie> moviesInCart = _ShoppingCartBusiness.GetShoppingCartMoviesById(1);
             var model = new ShoppingCartViewModel {
-                Albums =
+                Albums = _ShoppingCartBusiness.GetShoppingCartAlbumsById(1),
+                Movies = _ShoppingCartBusiness.GetShoppingCartMoviesById(1)
             };
             return View(model);
         }

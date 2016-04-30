@@ -9,15 +9,16 @@ namespace Odasoft.mPlay.Business
 {
     public class ShoppingCartBusiness
     {
+        //PROPERTIES
         public ICollection<Movie> moviesInCart;
         private readonly AlbumBusiness _AlbumBusiness;
-
+        //CONSTRUCTOR
         public ShoppingCartBusiness(AlbumBusiness AlbumBusiness)
         {
             this._AlbumBusiness = AlbumBusiness;
             moviesInCart = GetShoppingCartMoviesById(1);
         }
-
+        //METHODS
         public ICollection<Album> GetShoppingCartAlbumsById(int ShoppingCartId)
         {
 
