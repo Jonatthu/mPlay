@@ -38,7 +38,7 @@
 
 
 @{
-    foreach (var movie in Model)
+    foreach (var movie in Model.Movies)
     {
         <div class="row">
             <div class="col-sm-6 col-md-12">
@@ -57,6 +57,37 @@
 
                         <div class="col-md-3">
                             <button type="button"  action="/ShoppingCart/remove" class="btn btn-danger btn-sm btn-block" onClick="location.href = '/ShoppingCart/index'">Remove</button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    }
+}
+
+@{
+    foreach (var album in Model.Albums)
+    {
+        <div class="row">
+            <div class="col-sm-6 col-md-12">
+                <div class="thumbnail">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src=@album.Image alt="Kiwi" width="240" height="200">
+                        </div>
+                        <div class="col-md-3">
+                            <h4>The Revenant</h4>
+                            <div class="caption">
+                                <h6>@album.Id</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3">@album.Price</div>
+
+                        <div class="col-md-3">
+                            <button type="button" action="/ShoppingCart/remove" class="btn btn-danger btn-sm btn-block" onClick="location.href = '/ShoppingCart/index'">Remove</button>
 
                         </div>
                     </div>
