@@ -7,34 +7,52 @@ using System.Threading.Tasks;
 
 namespace Odasoft.mPlay.Business
 {
-   public class AlbumBusiness
+    public class AlbumBusiness
     {
-        public AlbumBusiness()
+        private readonly SongBusiness _SongBusiness;
+        public AlbumBusiness(SongBusiness SongBusiness)
         {
+            this._SongBusiness = SongBusiness;
+        }
 
+        public int NumberOfAlbums()
+        {
+            return this.GetAlbums().Count;
         }
 
         public ICollection<Album> GetAlbums()
         {
-            var Albums = new List<Album>();
-            for (int i = 0; i < 10; i++)
+            var items = new List<Album>();
+            for (int j = 0; j < 10; j++)
             {
-                Albums.Add(new Album());
+                string imageurl = "http://s3.foxfilm.com/foxmovies/production/films/96/images/gallery/revenant-gallery-20-gallery-image.jpg";
+                items.Add(new Album
+                {
+                    Id = j,
+                    Author = "Guillermo Del Toro",
+                    Description = "Great Thriller",
+                    Genre = "Action",
+                    Image = imageurl,
+                    Length = "1",
+                    Price = 120,
+                    ReleaseDate = DateTime.Now,
+                    Title = "The Revenant"
+                });
+
+
             }
 
-            return Albums;
+            return items;
         }
+
+
         public Album GetAlbumById(int AlbumId)
         {
-            var Album = new Album{
-                
-                Author = "Me",
-                Description = "Great Album",
-                Genre = "Terror",
-                Id = 1,
-                Image = "Hello World",
-                Length = "04:05"
-            };
+
+            var Album = this.GetAlbums().ToList()
+                .FindAll(x => x.Id == AlbumId).FirstOrDefault();
+
+            Album.Songs = this._SongBusiness.GetSongsByAlbumId(AlbumId);
 
             return Album;
         }

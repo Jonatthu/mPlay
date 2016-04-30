@@ -10,55 +10,19 @@ namespace Odasoft.mPlay.Business
     public class ShoppingCartBusiness
     {
         public ICollection<Movie> moviesInCart;
+        private readonly AlbumBusiness _AlbumBusiness;
 
-        public ShoppingCartBusiness()
+        public ShoppingCartBusiness(AlbumBusiness AlbumBusiness)
         {
+            this._AlbumBusiness = AlbumBusiness;
             moviesInCart = GetShoppingCartMoviesById(1);
         }
 
         public ICollection<Album> GetShoppingCartAlbumsById(int ShoppingCartId)
         {
-            
-            
-            var items = new List<Album>();
-            for (int j=0;j<10;j++)
-            {
 
-
-                var songs = new List<Song>();
-                for (int i = 0; i < 10; i++)
-                {
-                    songs.Add(new Song
-                    {
-                        Id = i,
-                        AlbumId = 1,
-                        SongLength = "4:05",
-                        SongName = "Song Name"
-                    });
-                }
-
-                
-    
-                string imageurl = "http://s3.foxfilm.com/foxmovies/production/films/96/images/gallery/revenant-gallery-20-gallery-image.jpg";
-                items.Add(new Album
-                {
-                    
-                    Id = 1,
-                    Author = "Guillermo Del Toro",
-                    Description = "Great Thriller",
-                    Genre = "Action",
-                    Image = imageurl,
-                    Length = "1",
-                    Price = 120,
-                    ReleaseDate = DateTime.Now,
-                    Title = "The Revenant",
-                    Songs = songs
-                });
-
-
-            }
-            
-            return items;
+            return this._AlbumBusiness.GetAlbums();
+                  
         }
 
         public ICollection<Movie> GetShoppingCartMoviesById(int ShoppingCartId)

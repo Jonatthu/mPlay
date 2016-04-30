@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Odasoft.mPlay.Business
 {
-    class MovieBusiness
+    public class MovieBusiness
     {
         public MovieBusiness()
         {

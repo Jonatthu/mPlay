@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Odasoft.mPlay.Business
 {
-    class SongBusiness
+    public class SongBusiness
     {
 
         public SongBusiness()
@@ -19,50 +19,24 @@ namespace Odasoft.mPlay.Business
         {
             var songs = new List<Song>();
 
-            songs.Add(new Song
-            {
-                Id = 1,
-                SongName = "Lose Yourself",
-                SongLength = "05:23",
-                AlbumId = 1
-            });
-
-            songs.Add(new Song
-            {
-                Id = 2,
-                SongName = "Not Afraid",
-                SongLength = "04:19",
-                AlbumId = 2
-            });
-
-            songs.Add(new Song
-            {
-                Id = 3,
-                SongName = "Without Me",
-                SongLength = "05:00",
-                AlbumId = 3
-            });
-
-            songs.Add(new Song
-            {
-                Id = 4,
-                SongName = "Rap God",
-                SongLength = "06:10",
-                AlbumId = 4
-            });
+            for(int i = 0; i < 10; i++)
+                for(int j = i*10; j < i*10+10; j++)
+                    songs.Add(new Song
+                    {
+                        Id = j,
+                        SongName = "Lose Yourself",
+                        SongLength = "05:23",
+                        AlbumId = i
+                    });
 
             return songs;
         }
 
-        public Song GetSongById(int SongId)
+        public ICollection<Song> GetSongsByAlbumId(int AlbumId)
         {
-            return new Song()
-            {
-                AlbumId = 1,
-                Id = 1,
-                SongLength = "04:50",
-                SongName = "8 Mile"
-            };
+            var songs = this.GetSongs().ToList();
+            var AlbumSongs = songs.FindAll(x => x.AlbumId == AlbumId);
+            return AlbumSongs;
         }
 
         public Song CreateSong(Song model)

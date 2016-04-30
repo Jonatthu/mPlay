@@ -1,0 +1,40 @@
+﻿@model Odasoft.mPlay.Models.Album
+@{
+    ViewData["Title"] = "Song Page";
+}
+
+<center>
+    <img style="width:100%" src="@Model.Image" alt="...">
+</center>
+<br />
+
+<div class="row">
+    <div class="col-md-10">
+        <h1>@Model.Title</h1>
+    </div>
+    <div class="col-md-2">
+        <h4>$@Model.Price</h4>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h4>Description </h4>
+        <br />
+        @Model.Description
+    </div>
+</div>
+<div class="row">
+    <h2>Songs</h2>
+    @foreach (var item in Model.Songs)
+    {
+        <div class="list-group col-md-12">
+            <div class="list-group-item">@item.SongName</div>
+            <div class="list-group-item">@item.SongLength</div>
+        </div>
+    }
+</div>
+
+<div class="bottom">
+    <a class="btn btn-primary btn-lg col-md-12" href="#" role="button">Buy Album</a>
+</div>

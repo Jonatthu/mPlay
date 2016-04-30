@@ -21,6 +21,7 @@ namespace Odasoft.mPlay.Web.Controllers
         [HttpGet]
         public JsonResult GetJson()
         {
+           
             var result = _ShoppingCartBusiness.GetShoppingCartAlbumsById(1);
             
             return Json(result);

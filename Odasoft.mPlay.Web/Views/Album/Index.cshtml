@@ -1,65 +1,43 @@
-﻿@{
+﻿@model ICollection<Odasoft.mPlay.Models.Album>
+@{
     ViewData["Title"] = "Album Page";
 }
 
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="input-group col-lg-6">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Go!</button>
-                </span>
-            </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-    </div>
-    <br />
+<div class="row">
+    <div class="col-lg-6">
+        <div class="input-group col-lg-6">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+            </span>
+        </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+</div>
+<br />
 
 <h3>
-    Eminem's Albums
+    Albums
 </h3>
 <br />
 
-    <div class="row">
-        <!---->
-        <div class="col-xs-6 col-md-4">
-            <a href="Song/Index" class="thumbnail">
-                <img src="http://shadyrecords.com/eminem.com/mmlp2_art.jpg" alt="...">
-            </a>
-        </div>
+<div class="row">
+
+    @foreach (var item in Model)
+    {
 
         <!---->
-        <div class="col-xs-6 col-md-4">
-            <a href="Song/Index" class="thumbnail">
-                <img src="http://www.eminem.net/albums/the_eminem_show/images/the-eminem-show-cover-big.jpg" alt="...">
+        <div class="col-xs-12 col-md-4">
+            <a href="Album/Details/@item.Id" class="thumbnail">
+                <img src="@item.Image" alt="...">
             </a>
+            <h3>@item.Title</h3>
+            <p>@item.Description</p>
+            <a class="btn btn-primary btn-lg">Buy</a>
+
         </div>
 
-        <!---->
-        <div class="col-xs-6 col-md-4">
-            <a href="Song/Index" class="thumbnail">
-                <img src="https://tartillos.files.wordpress.com/2011/07/eminem-recovery-official-album-cover.jpg" alt="...">
-            </a>
-        </div>
+    }
 
-        <!---->
-        <div class="col-xs-6 col-md-4">
-            <a href="Song/Index" class="thumbnail">
-                <img src="http://cdn3.pitchfork.com/albums/2750/homepage_large.62da6a2d.jpg" alt="...">
-            </a>
-        </div>
 
-        <!---->
-        <div class="col-xs-6 col-md-4">
-            <a href="Song/Index" class="thumbnail">
-                <img src="https://upload.wikimedia.org/wikipedia/en/4/42/Relapse_(album).jpg" alt="...">
-            </a>
-        </div>
 
-        <!---->
-        <div class="col-xs-6 col-md-4">
-            <a href="Song/Index" class="thumbnail">
-                <img src="https://upload.wikimedia.org/wikipedia/en/c/c5/Eminem_Presents_the_Re-Up.jpg" alt="...">
-            </a>
-        </div>
-
-    </div><!--End Row-->
+</div><!--End Row-->

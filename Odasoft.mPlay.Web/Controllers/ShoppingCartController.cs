@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
+using Odasoft.mPlay.Web.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -21,9 +22,11 @@ namespace Odasoft.mPlay.Web.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            ICollection<Movie> moviesInCart = _ShoppingCartBusiness.GetShoppingCartMoviesById(1);
-
-            return View(moviesInCart);
+            //ICollection<Movie> moviesInCart = _ShoppingCartBusiness.GetShoppingCartMoviesById(1);
+            var model = new ShoppingCartViewModel {
+                Albums =
+            };
+            return View(model);
         }
 
         public IActionResult CheckOut()
