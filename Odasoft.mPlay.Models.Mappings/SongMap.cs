@@ -14,6 +14,10 @@ namespace Odasoft.mPlay.Models.Mappings
             Property(x => x.SongName).IsRequired();
             Property(x => x.SongLength).IsRequired();
             Property(x => x.AlbumId).IsRequired();
+
+            HasRequired<Album>(s => s.Album)
+                .WithMany(s => s.Songs);
+
             this.ToTable("Songs");
         }
     }

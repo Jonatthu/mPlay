@@ -7,6 +7,11 @@ namespace Odasoft.mPlay.Models
 {
     public class Movie : Article
     {
+        public Movie()
+        {
+            this.ShoppingCarts = new HashSet<ShoppingCart>();
+        }
+        public virtual ICollection<ShoppingCart> ShoppingCarts { get; set; }
 
     }
 }

@@ -13,7 +13,8 @@ namespace Odasoft.mPlay.Data
     // To enable this option, right-click on the project and select the Properties menu item. In the Build tab select "Produce outputs on build".
     public class mPlayDbContext : DbContext
     {
-        public mPlayDbContext() : base("mPlayDbContext")
+        public mPlayDbContext() 
+            : base(@"Data Source = (local);Database=mPlayDbContext;Integrated Security=true;")
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;

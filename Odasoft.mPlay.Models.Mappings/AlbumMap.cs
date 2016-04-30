@@ -18,10 +18,6 @@ namespace Odasoft.mPlay.Models.Mappings
             Property(x => x.Length).IsRequired();
             Property(x => x.Image).IsRequired();
 
-            HasMany<Song>(x => x.SongList)
-            .WithRequired(x => x.Album)
-            .HasForeignKey(x => x.AlbumId);
-
             this.ToTable("Albums");
         }
 

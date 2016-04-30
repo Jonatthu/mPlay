@@ -14,11 +14,26 @@ namespace Odasoft.mPlay.Models.Mappings
             Property(x => x.TotalPrice).IsRequired();
             Property(x => x.UserId).IsRequired();
 
-            HasMany<Album>(x => x.AlbumList);
-                
+            HasRequired(s => s.User)
+                .WithMany(s => s.ShoppingCarts);
 
-            HasMany<Movie>(x => x.MovieList);
-            
+            HasMany<Movie>(s => s.MovieList)
+                .WithMany(c => c.ShoppingCarts)
+                .Map(s =>
+                {
+                    s.MapLeftKey("ShoppingCartRefId");
+                    s.MapRightKey("MovieRefId");
+                    s.ToTable("ShoppingCartMovie");
+                });
+
+            HasMany<Album>(s => s.AlbumList)
+                .WithMany(c => c.ShoppingCarts)
+                .Map(s =>
+                {
+                    s.MapLeftKey("ShoppingCartRefId");
+                    s.MapRightKey("AlbumRefId");
+                    s.ToTable("ShoppingCartAlbum");
+                });
 
             this.ToTable("ShoppingCarts");
         }

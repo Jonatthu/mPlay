@@ -8,13 +8,14 @@ namespace Odasoft.mPlay.Models
     public class Album : Article
     {
 
-        public virtual ICollection<Song> SongList { get; set; }
-
         public Album()
         {
-            SongList = new List<Song>();
+            Songs = new List<Song>();
+            this.ShoppingCarts = new HashSet<ShoppingCart>();
         }
 
-       
+        public virtual ICollection<Song> Songs { get; set; }
+
+        public virtual ICollection<ShoppingCart> ShoppingCarts { get; set; }
     }
 }
