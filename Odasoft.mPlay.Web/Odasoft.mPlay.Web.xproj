@@ -19,5 +19,9 @@
     <DnxInvisibleContent Include=".bowerrc" />
     <DnxInvisibleContent Include="package.json" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Odasoft.mPlay.Business\Odasoft.mPlay.Business.csproj" />
+    <ProjectReference Include="..\Odasoft.mPlay.Models\Odasoft.mPlay.Models.csproj" />
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>

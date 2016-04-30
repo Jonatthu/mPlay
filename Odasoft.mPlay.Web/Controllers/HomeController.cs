@@ -3,11 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
+using Odasoft.mPlay.Business;
 
 namespace Odasoft.mPlay.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ShoppingCartBusiness _ShoppingCartBusiness;
+
+        public HomeController(ShoppingCartBusiness ShoppingCartBusiness)
+        {
+            this._ShoppingCartBusiness = ShoppingCartBusiness;
+        }
+
+        [HttpGet]
+        public JsonResult GetJson()
+        {
+            var result = _ShoppingCartBusiness.GetShoppingCartAlbumsById(1);
+            return Json(result);
+        }
+
         public IActionResult Index()
         {
             return View();

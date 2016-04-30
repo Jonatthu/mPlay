@@ -1,0 +1,13 @@
+C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Business\bin\Debug\Odasoft.mPlay.Business.dll
+C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Business\bin\Debug\Odasoft.mPlay.Business.pdb
+C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Business\bin\Debug\Odasoft.mPlay.Data.dll
+C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Business\bin\Debug\Odasoft.mPlay.Models.dll
+C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Business\bin\Debug\EntityFramework.dll
+C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Business\bin\Debug\Odasoft.mPlay.Models.Mappings.dll
+C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Business\bin\Debug\Odasoft.mPlay.Data.pdb
+C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Business\bin\Debug\Odasoft.mPlay.Models.pdb
+C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Business\bin\Debug\EntityFramework.xml
+C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Business\bin\Debug\Odasoft.mPlay.Models.Mappings.pdb
+C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Business\obj\Debug\Odasoft.mPlay.Business.csprojResolveAssemblyReference.cache
+C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Business\obj\Debug\Odasoft.mPlay.Business.dll
+C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Business\obj\Debug\Odasoft.mPlay.Business.pdb

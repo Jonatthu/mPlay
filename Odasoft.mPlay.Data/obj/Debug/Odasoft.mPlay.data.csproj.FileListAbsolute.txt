@@ -12,3 +12,5 @@ C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.data\bin\Debug\EntityFramework.S
 C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.data\obj\Debug\Odasoft.mPlay.data.csprojResolveAssemblyReference.cache
 C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.data\obj\Debug\Odasoft.mPlay.Data.dll
 C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.data\obj\Debug\Odasoft.mPlay.Data.pdb
+C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.data\obj\Debug\Odasoft.mPlay.Data.Migrations.Initial.resources
+C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.data\obj\Debug\Odasoft.mPlay.Data.csproj.GenerateResource.Cache

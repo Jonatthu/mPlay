@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "wrappedProject": "../../Odasoft.mPlay.data/Odasoft.mPlay.Data.csproj",
+      "bin": {
+        "assembly": "../../Odasoft.mPlay.data/obj/{configuration}/Odasoft.mPlay.Data.dll",
+        "pdb": "../../Odasoft.mPlay.data/obj/{configuration}/Odasoft.mPlay.Data.pdb"
+      },
+      "dependencies": {
+        "EntityFramework": "6.1.3",
+        "Odasoft.mPlay.Models.Mappings": "1.0.0-*",
+        "Odasoft.mPlay.Models": "1.0.0-*"
+      }
+    }
+  }
+}

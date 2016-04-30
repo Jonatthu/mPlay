@@ -7,11 +7,18 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using SimpleInjector;
+using SimpleInjector.Extensions.ExecutionContextScoping;
+using SimpleInjector.Integration.AspNet;
+using Microsoft.AspNet.Mvc.Controllers;
+using Microsoft.AspNet.Mvc.ViewComponents;
 
 namespace Odasoft.mPlay.Web
 {
     public class Startup
     {
+        private Container container = new Container();
+
         public Startup(IHostingEnvironment env)
         {
             // Set up configuration sources.
@@ -28,11 +35,23 @@ namespace Odasoft.mPlay.Web
         {
             // Add framework services.
             services.AddMvc();
+            services.AddInstance<IControllerActivator>(new SimpleInjectorControllerActivator(container));
+            services.AddInstance<IViewComponentInvokerFactory>(new SimpleInjectorViewComponentInvokerFactory(container));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+
+            container.Options.DefaultScopedLifestyle = new AspNetRequestLifestyle();
+            app.UseSimpleInjectorAspNetRequestScoping(container);
+            InitializeContainer(app);
+            container.RegisterAspNetControllers(app);
+            container.RegisterAspNetViewComponents(app);
+
+            container.Verify();
+
+
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
@@ -56,6 +75,11 @@ namespace Odasoft.mPlay.Web
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        private void InitializeContainer(IApplicationBuilder app)
+        {
+            //container.Register<UnitOfWork, UnitOfWork>(Lifestyle.Scoped);
         }
 
         // Entry point for the application.
