@@ -1,4 +1,0 @@
-C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Models\bin\Debug\Odasoft.mPlay.Models.dll
-C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Models\bin\Debug\Odasoft.mPlay.Models.pdb
-C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Models\obj\Debug\Odasoft.mPlay.Models.dll
-C:\Users\jonat\Source\Repos\mPlay\Odasoft.mPlay.Models\obj\Debug\Odasoft.mPlay.Models.pdb
