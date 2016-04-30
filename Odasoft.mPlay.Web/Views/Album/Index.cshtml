@@ -24,8 +24,6 @@
 
     @foreach (var item in Model)
     {
-
-        <!---->
         <div class="col-xs-12 col-md-4">
             <a href="Album/Details/@item.Id" class="thumbnail">
                 <img src="@item.Image" alt="...">
@@ -33,9 +31,7 @@
             <h3>@item.Title</h3>
             <p>@item.Description</p>
             <a class="btn btn-primary btn-lg">Buy</a>
-
         </div>
-
     }
 
 
