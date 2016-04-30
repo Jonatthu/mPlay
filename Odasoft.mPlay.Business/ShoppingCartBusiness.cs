@@ -9,59 +9,89 @@ namespace Odasoft.mPlay.Business
 {
     public class ShoppingCartBusiness
     {
+        public ICollection<Movie> moviesInCart;
+
         public ShoppingCartBusiness()
         {
-
+            moviesInCart = GetShoppingCartMoviesById(1);
         }
 
-        public ICollection<Album> GetShoppingCartAlbumsById(int Id)
+        public ICollection<Album> GetShoppingCartAlbumsById(int ShoppingCartId)
         {
-            var songs = new List<Song>();
-            songs.Add(new Song
-            {
-                Id = 1,
-                AlbumId = 1,
-                SongLength = "4:05",
-                SongName = "Song Name"
-            });
-
+            
+            
             var items = new List<Album>();
-            items.Add(new Album
+            for (int j=0;j<10;j++)
             {
-                Id = 1,
-                Author = "Jonatthu",
-                Description = "asdasdsadasdasdsadsadsad",
-                Genre = "string",
-                Image = "imageurl",
-                Length = "1",
-                Price = 120,
-                ReleaseDate = DateTime.Now,
-                Title = "A title",
-                Songs = songs
-            });
 
+
+                var songs = new List<Song>();
+                for (int i = 0; i < 10; i++)
+                {
+                    songs.Add(new Song
+                    {
+                        Id = i,
+                        AlbumId = 1,
+                        SongLength = "4:05",
+                        SongName = "Song Name"
+                    });
+                }
+
+                
+    
+                string imageurl = "http://s3.foxfilm.com/foxmovies/production/films/96/images/gallery/revenant-gallery-20-gallery-image.jpg";
+                items.Add(new Album
+                {
+                    
+                    Id = 1,
+                    Author = "Guillermo Del Toro",
+                    Description = "Great Thriller",
+                    Genre = "Action",
+                    Image = imageurl,
+                    Length = "1",
+                    Price = 120,
+                    ReleaseDate = DateTime.Now,
+                    Title = "The Revenant",
+                    Songs = songs
+                });
+
+
+            }
+            
             return items;
         }
 
-        public ICollection<Movie> GetShoppingCartMoviesById(int Id)
+        public ICollection<Movie> GetShoppingCartMoviesById(int ShoppingCartId)
         {
             var movies = new List<Movie>();
-            movies.Add(new Movie
+
+            for (int i=0;i<10;i++)
             {
-                Id = 1,
-                Title = "Titanic",
-                Author = "Bla BLa",
-                ReleaseDate = DateTime.Now,
-                Genre = "Romantic",
-                Price = 45,
-                Description = "Titanic sinks",
-                Length = "2:45",
-                Image = "URL"
+                string imageurl = "http://s3.foxfilm.com/foxmovies/production/films/96/images/gallery/revenant-gallery-20-gallery-image.jpg";
+                movies.Add(new Movie
+                {
+                    Id = i,
+                    Title = "The Revenant",
+                    Author = "Guillermo Del Toro",
+                    ReleaseDate = DateTime.Now,
+                    Genre = "Action",
+                    Price = 45,
+                    Description = "Great thriller",
+                    Length = "2:45",
+                    Image = imageurl
 
-            });
-
+                });
+            }
+            
             return movies;
         }
+
+        public void removeMovieById(int MovieId)
+        {
+           var  movie = moviesInCart.ElementAt(MovieId);
+            moviesInCart.Remove(movie);
+        }
+      
 
 
     }

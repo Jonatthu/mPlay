@@ -1,0 +1,77 @@
+﻿@model ICollection<Odasoft.mPlay.Models.Movie>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="heading">
+    <h1>Shopping Cart</h1>
+    <h6>Your Items</h6>
+</div>
+
+
+        <div class="row">
+            <div class="col-sm-6 col-md-12">
+                <div class="thumbnail">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="http://s3.foxfilm.com/foxmovies/production/films/96/images/gallery/revenant-gallery-20-gallery-image.jpg" alt="Kiwi" width="240" height="200">
+                        </div>
+                        <div class="col-md-3">
+                            <h4>The Revenant</h4>
+                            <div class="caption">
+                                <h6>static</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3">$20.00</div>
+
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-danger btn-sm btn-block ">Remove</button>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+@{
+    foreach (var movie in Model)
+    {
+        <div class="row">
+            <div class="col-sm-6 col-md-12">
+                <div class="thumbnail">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src=@movie.Image alt="Kiwi" width="240" height="200">
+                        </div>
+                        <div class="col-md-3">
+                            <h4>The Revenant</h4>
+                            <div class="caption">
+                                <h6>@movie.Id</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3">@movie.Price</div>
+
+                        <div class="col-md-3">
+                            <button type="button"  action="/ShoppingCart/remove" class="btn btn-danger btn-sm btn-block" onClick="location.href = '/ShoppingCart/index'">Remove</button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    }
+}
+
+
+
+
+
+    <div class="Total">
+        <h1>Your Total: $1000</h1>
+    </div>
+    <button type="button" class="btn btn-primary btn-lg btn-block">CheckOut</button>
