@@ -9,15 +9,16 @@ namespace Odasoft.mPlay.Business
 {
     public class ShoppingCartBusiness
     {
-        public ICollection<Movie> moviesInCart;
+        //PROPERTIES
+        //public ICollection<Movie> moviesInCart;
         private readonly AlbumBusiness _AlbumBusiness;
-
+        //CONSTRUCTOR
         public ShoppingCartBusiness(AlbumBusiness AlbumBusiness)
         {
             this._AlbumBusiness = AlbumBusiness;
-            moviesInCart = GetShoppingCartMoviesById(1);
+            //moviesInCart = GetShoppingCartMoviesById(1);
         }
-
+        //METHODS
         public ICollection<Album> GetShoppingCartAlbumsById(int ShoppingCartId)
         {
 
@@ -52,8 +53,7 @@ namespace Odasoft.mPlay.Business
 
         public void removeMovieById(int MovieId)
         {
-           var  movie = moviesInCart.ElementAt(MovieId);
-            moviesInCart.Remove(movie);
+           //lines to remove movie from cart table
         }
       
 
