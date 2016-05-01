@@ -1,6 +1,6 @@
 ﻿@model ICollection<Odasoft.mPlay.Models.Album>
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Album Page";
 }
 
 <meta charset="utf-8">
@@ -63,6 +63,12 @@
     .precio {
         text-align: center;
     }
+
+    .with-pad {
+        text-align: justify;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
 </style>
 
 <div class="col-xs-12">
@@ -80,7 +86,7 @@
                                 <a href="Album/Details/@item.Id" class="thumbnail">
                                     <img src="@item.Image" alt="...">
                                 </a>
-                                <a class="btn btn-primary btn-lg">Buy</a>
+                                <a class="btn btn-primary btn-lg">Add to cart</a>
                             </div>
                             if (@item.Id == 3) { break; } //Terminamos en el ID 3
                         }
@@ -99,7 +105,7 @@
                                 </a>
                                 <a class="btn btn-primary btn-lg">Buy</a>
                             </div>
-                            if (@item.Id == 7){ break; } //Terminamos en el ID 7
+                            if (@item.Id == 7) { break; } //Terminamos en el ID 7
                         }
 
                     </div><!--/item-->
@@ -138,20 +144,20 @@
 
 
 <div class="container">
-    <input type="text" class="form-control" placeholder="Buscar "/>
+    <input type="text" class="form-control" placeholder="Buscar " />
     <br /><br />
     <div class="row peliculas">
 
-        <div class="thumbnail">
+        <div class="thumbnail" style="position: relative; overflow: hidden">
             @foreach (var item in Model)
             {
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3 col-sm-6 col-xs-12" style="height:700px">
                     <a href="Album/Details/@item.Id" class="thumbnail">
                         <img src="@item.Image" alt="...">
                     </a>
                     <h3>@item.Title</h3>
-                    <p>@item.Description</p>
-                    <a class="btn btn-primary btn-lg">Buy</a>
+                    <p class="with-pad">@item.Description</p>
+                    <a class="btn btn-primary btn-lg">Add to cart</a>
                 </div>
             }
 
