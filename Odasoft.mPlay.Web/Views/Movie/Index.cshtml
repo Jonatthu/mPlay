@@ -100,7 +100,7 @@
                         @foreach (var item in Model)
                         {
                             if (@item.Id < 4) { continue; } //Empezamos en el ID 4
-                            <div class="col-md-3 col-sm-3 col-xs-3">
+                            <div class="col-md-3 col-sm-3 col-xs-3" >
                                 <a href="Movie/Details/@item.Id" class="thumbnail">
                                     <img style="width:100%; height:100%" src="@item.Image" alt="...">
                                 </a>
@@ -147,12 +147,11 @@
 <div class="container">
     <input type="text" class="form-control" placeholder="Buscar " />
     <br /><br />
-    <div class="row peliculas container">
-
-        <div class="thumbnail">
+    <div class="row peliculas container" >
+        <div class="thumbnail" style="position: relative; overflow: hidden">
             @foreach (var item in Model)
             {
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-sm-6 col-xs-12"  style="height:900px">
                     <a href="Movie/Details/@item.Id" class="thumbnail">
                         <img style="width:100%; height:100%" src="@item.Image" alt="...">
                     </a>
