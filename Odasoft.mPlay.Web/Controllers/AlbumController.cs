@@ -31,12 +31,6 @@ namespace Odasoft.mPlay.Web.Controllers
             return View(model);
         }
 
-        public IActionResult Prueba()
-        {
-            var model = this._AlbumBusiness.GetAlbums();
-            return View(model);
-        }
-
         
     }
 }
