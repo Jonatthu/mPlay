@@ -25,18 +25,32 @@ namespace Odasoft.mPlay.Business
             var items = new List<Album>();
             for (int j = 0; j < 10; j++)
             {
-                string imageurl = "http://s3.foxfilm.com/foxmovies/production/films/96/images/gallery/revenant-gallery-20-gallery-image.jpg";
+                string description = "Recovery is the seventh studio album by American rapper Eminem. It was released on June 18, 2010, by Shady Records, Aftermath Entertainment and Interscope Records as the follow-up to Eminem's Relapse (2009). Originally planned to be released as Relapse 2, the album was renamed to Recovery when Eminem found the music of the new album different from its predecessor.";
+                string[] albumsA = { "Recovery", "Marshall Mathers LP 2", "Marshall Mathers LP", "Slim Shady", "Relapse", "Encore", "Infinite", "The Eminem Show", "Curtain Call","Underground" };
+                string[] imagesA = {
+                "https://tartillos.files.wordpress.com/2011/07/eminem-recovery-official-album-cover.jpg",
+                "https://upload.wikimedia.org/wikipedia/en/a/ae/The_Marshall_Mathers_LP.jpg",
+                "https://upload.wikimedia.org/wikipedia/en/6/69/The_Marshall_Mathers_LP_second_cover.jpg",
+                "https://upload.wikimedia.org/wikipedia/en/3/35/Eminem_-_The_Slim_Shady_LP_CD_cover.jpg",
+                "https://upload.wikimedia.org/wikipedia/en/4/42/Relapse_(album).jpg",
+                "https://upload.wikimedia.org/wikipedia/en/b/b4/Encore_(Eminem_album)_coverart.jpg",
+                "http://ecx.images-amazon.com/images/I/51Y6eiq0MwL.jpg",
+                "https://upload.wikimedia.org/wikipedia/en/3/35/The_Eminem_Show.jpg",
+                "https://upload.wikimedia.org/wikipedia/en/4/4e/Curtain_Call_cover.jpg",
+                "http://eminem.wbs.cz/fotogalerie/2/velke/2nktcmf.jpg"
+                };
+
                 items.Add(new Album
                 {
                     Id = j,
-                    Author = "Guillermo Del Toro",
-                    Description = "Great Thriller",
-                    Genre = "Action",
-                    Image = imageurl,
-                    Length = "1",
+                    Author = "Eminem",
+                    Description = description,
+                    Genre = "Hip Hop",
+                    Image = imagesA[j],
+                    Length = "05:23",
                     Price = 120,
                     ReleaseDate = DateTime.Now,
-                    Title = "The Revenant"
+                    Title = albumsA[j]
                 });
 
 

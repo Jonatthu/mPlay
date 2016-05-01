@@ -14,20 +14,27 @@ namespace Odasoft.mPlay.Business
         {
 
         }
-         
+
         public ICollection<Song> GetSongs()
         {
             var songs = new List<Song>();
-
-            for(int i = 0; i < 10; i++)
-                for(int j = i*10; j < i*10+10; j++)
-                    songs.Add(new Song
-                    {
-                        Id = j,
-                        SongName = "Lose Yourself",
-                        SongLength = "05:23",
-                        AlbumId = i
-                    });
+            string[] songsA = { "Lose Yourself", "No Love", "Rap God", "Mocking Bird", "Beautiful", "Not Afraid", "8 Mile", "Headlights", "My name is", "When Im Gone" };
+            
+            for (int i = 0; i < 10; i++)
+            {
+                int k = 0;
+                for (int j = i * 10; j < i * 10 + 10; j++)
+                {
+                        songs.Add(new Song
+                        {
+                            Id = j,
+                            SongName = songsA[k],
+                            SongLength = "05:23",
+                            AlbumId = i
+                        });
+                    k++;
+                }
+            }
 
             return songs;
         }
@@ -47,7 +54,7 @@ namespace Odasoft.mPlay.Business
                 SongName = "Mockingbird",
                 SongLength = "05:00",
                 AlbumId = 1
-        };
+            };
         }
 
         public Song EditSong(Song model)
@@ -59,7 +66,7 @@ namespace Odasoft.mPlay.Business
                 SongLength = "04:50",
                 SongName = "8 Mile"
             };
-    }
+        }
 
         public void DeleteSongById(int SongId)
         {

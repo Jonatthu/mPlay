@@ -4,7 +4,7 @@
 }
 
 <center>
-    <img style="width:100%" src="@Model.Image" alt="...">
+    <img style="width:60%" src="@Model.Image" alt="...">
 </center>
 <br />
 
@@ -29,9 +29,14 @@
     @foreach (var item in Model.Songs)
     {
         <div class="list-group col-md-12">
-            <div class="list-group-item">@item.SongName</div>
-            <div class="list-group-item">@item.SongLength</div>
+            <div class="col-md-6">
+                <div class="list-group-item">@item.SongName</div>
+            </div>
+            <div class="col-md-offset-6">
+                <div class="list-group-item">@item.SongLength</div>
+            </div>
         </div>
+
     }
 </div>
 
