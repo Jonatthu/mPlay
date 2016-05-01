@@ -82,6 +82,10 @@
                                 </a>
                                 <a class="btn btn-primary btn-lg">Buy</a>
                             </div>
+                            if (@item.Id == 3)
+                            {
+                                break;
+                            }
                         }
 
                     </div><!--/row-->
@@ -89,15 +93,16 @@
 
                 <div class="item">
                     <div class="row">
-
                         @foreach (var item in Model)
                         {
+                            if (@item.Id < 4) { continue; }
                             <div class="col-md-3 col-sm-3 col-xs-3">
                                 <a href="Album/Details/@item.Id" class="thumbnail">
                                     <img src="@item.Image" alt="...">
                                 </a>
                                 <a class="btn btn-primary btn-lg">Buy</a>
                             </div>
+                            if (@item.Id == 7){ break; }
                         }
 
                     </div><!--/item-->
@@ -108,12 +113,14 @@
 
                         @foreach (var item in Model)
                         {
+                            if (@item.Id < 7) { continue; }
                             <div class="col-md-3 col-sm-3 col-xs-3">
                                 <a href="Album/Details/@item.Id" class="thumbnail">
                                     <img src="@item.Image" alt="...">
                                 </a>
                                 <a class="btn btn-primary btn-lg">Buy</a>
                             </div>
+                            if (@item.Id == 9) { break; }
                         }
 
                     </div><!--/item-->
@@ -134,7 +141,7 @@
 
 
 <div class="container">
-    <input type="text" class="form-control" placeholder="Buscar ">
+    <input type="text" class="form-control" placeholder="Buscar "/>
     <br /><br />
     <div class="row peliculas">
 
