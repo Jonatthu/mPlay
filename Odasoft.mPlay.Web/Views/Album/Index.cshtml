@@ -82,10 +82,7 @@
                                 </a>
                                 <a class="btn btn-primary btn-lg">Buy</a>
                             </div>
-                            if (@item.Id == 3)
-                            {
-                                break;
-                            }
+                            if (@item.Id == 3) { break; } //Terminamos en el ID 3
                         }
 
                     </div><!--/row-->
@@ -95,14 +92,14 @@
                     <div class="row">
                         @foreach (var item in Model)
                         {
-                            if (@item.Id < 4) { continue; }
+                            if (@item.Id < 4) { continue; } //Empezamos en el ID 4
                             <div class="col-md-3 col-sm-3 col-xs-3">
                                 <a href="Album/Details/@item.Id" class="thumbnail">
                                     <img src="@item.Image" alt="...">
                                 </a>
                                 <a class="btn btn-primary btn-lg">Buy</a>
                             </div>
-                            if (@item.Id == 7){ break; }
+                            if (@item.Id == 7){ break; } //Terminamos en el ID 7
                         }
 
                     </div><!--/item-->
@@ -113,14 +110,14 @@
 
                         @foreach (var item in Model)
                         {
-                            if (@item.Id < 7) { continue; }
+                            if (@item.Id < 7) { continue; } //Empezamos en el ID 7
                             <div class="col-md-3 col-sm-3 col-xs-3">
                                 <a href="Album/Details/@item.Id" class="thumbnail">
                                     <img src="@item.Image" alt="...">
                                 </a>
                                 <a class="btn btn-primary btn-lg">Buy</a>
                             </div>
-                            if (@item.Id == 9) { break; }
+                            if (@item.Id == 9) { break; } //Terminamos en el ultimo ID
                         }
 
                     </div><!--/item-->
