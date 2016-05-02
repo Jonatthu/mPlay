@@ -5,6 +5,7 @@
   },
 
   "dependencies": {
+    "dnx-clr-win-x86": "1.0.0-rc1-update1",
     "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
     "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-final",
     "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
