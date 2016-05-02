@@ -3,6 +3,9 @@
   "version": 2,
   "targets": {
     "DNX,Version=v4.6": {
+      "dnx-clr-win-x86/1.0.0-rc1-update1": {
+        "type": "package"
+      },
       "EntityFramework/6.1.3": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1571,8 +1574,6 @@
         "framework": ".NETFramework,Version=v4.5.1",
         "dependencies": {
           "EntityFramework": "6.1.3",
-          "Microsoft.AspNet.Scaffolding.EntityFramework.12.0": "1.0.0",
-          "Microsoft.Data.Entity.Design.Extensibility": "1.0.0",
           "Odasoft.mPlay.Models": "1.0.0",
           "Odasoft.mPlay.Models.Mappings": "1.0.0"
         }
@@ -1859,6 +1860,9 @@
       }
     },
     "DNX,Version=v4.6/win7-x86": {
+      "dnx-clr-win-x86/1.0.0-rc1-update1": {
+        "type": "package"
+      },
       "EntityFramework/6.1.3": {
         "type": "package",
         "frameworkAssemblies": [
@@ -3430,8 +3434,6 @@
         "framework": ".NETFramework,Version=v4.5.1",
         "dependencies": {
           "EntityFramework": "6.1.3",
-          "Microsoft.AspNet.Scaffolding.EntityFramework.12.0": "1.0.0",
-          "Microsoft.Data.Entity.Design.Extensibility": "1.0.0",
           "Odasoft.mPlay.Models": "1.0.0",
           "Odasoft.mPlay.Models.Mappings": "1.0.0"
         }
@@ -3718,6 +3720,9 @@
       }
     },
     "DNX,Version=v4.6/win7-x64": {
+      "dnx-clr-win-x86/1.0.0-rc1-update1": {
+        "type": "package"
+      },
       "EntityFramework/6.1.3": {
         "type": "package",
         "frameworkAssemblies": [
@@ -5289,8 +5294,6 @@
         "framework": ".NETFramework,Version=v4.5.1",
         "dependencies": {
           "EntityFramework": "6.1.3",
-          "Microsoft.AspNet.Scaffolding.EntityFramework.12.0": "1.0.0",
-          "Microsoft.Data.Entity.Design.Extensibility": "1.0.0",
           "Odasoft.mPlay.Models": "1.0.0",
           "Odasoft.mPlay.Models.Mappings": "1.0.0"
         }
@@ -5593,6 +5596,49 @@
     "Odasoft.mPlay.Models.Mappings/1.0.0": {
       "type": "project",
       "path": "../wrap/Odasoft.mPlay.Models.Mappings/project.json"
+    },
+    "dnx-clr-win-x86/1.0.0-rc1-update1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "jOwGMIEve0VRhiu8l1YVmGcRlqurXRGlgOeaQcCJWhqW/dhco3MB8ymbVCE/XLh79BMfZE7epC2z2wye/088vQ==",
+      "files": [
+        "bin/dnu.cmd",
+        "bin/dnx.clr.dll",
+        "bin/dnx.exe",
+        "bin/dnx.onecore.dll",
+        "bin/dnx.win32.dll",
+        "bin/lib/Microsoft.Dnx.DesignTimeHost/Microsoft.Dnx.DesignTimeHost.Abstractions.dll",
+        "bin/lib/Microsoft.Dnx.DesignTimeHost/Microsoft.Dnx.DesignTimeHost.dll",
+        "bin/lib/Microsoft.Dnx.DesignTimeHost/Newtonsoft.Json.dll",
+        "bin/lib/Microsoft.Dnx.Project/Microsoft.Dnx.Project.dll",
+        "bin/lib/Microsoft.Dnx.Tooling/Microsoft.Dnx.Project.dll",
+        "bin/lib/Microsoft.Dnx.Tooling/Microsoft.Dnx.Tooling.dll",
+        "bin/lib/Microsoft.Dnx.Tooling/Newtonsoft.Json.dll",
+        "bin/Microsoft.CodeAnalysis.CSharp.dll",
+        "bin/Microsoft.CodeAnalysis.dll",
+        "bin/Microsoft.Dnx.ApplicationHost.dll",
+        "bin/Microsoft.Dnx.Compilation.Abstractions.dll",
+        "bin/Microsoft.Dnx.Compilation.CSharp.Abstractions.dll",
+        "bin/Microsoft.Dnx.Compilation.CSharp.Common.dll",
+        "bin/Microsoft.Dnx.Compilation.CSharp.dll",
+        "bin/Microsoft.Dnx.Compilation.DesignTime.dll",
+        "bin/Microsoft.Dnx.Compilation.dll",
+        "bin/Microsoft.Dnx.DesignTimeHost.Abstractions.dll",
+        "bin/Microsoft.Dnx.dll",
+        "bin/Microsoft.Dnx.Host.Clr.dll",
+        "bin/Microsoft.Dnx.Host.dll",
+        "bin/Microsoft.Dnx.Host.Mono.dll",
+        "bin/Microsoft.Dnx.Loader.dll",
+        "bin/Microsoft.Dnx.Runtime.dll",
+        "bin/Microsoft.Dnx.Runtime.Internals.dll",
+        "bin/Microsoft.Extensions.PlatformAbstractions.dll",
+        "bin/System.Collections.Immutable.dll",
+        "bin/System.Reflection.Metadata.dll",
+        "bin/vcruntime140.dll",
+        "dnx-clr-win-x86.1.0.0-rc1-update1.nupkg",
+        "dnx-clr-win-x86.1.0.0-rc1-update1.nupkg.sha512",
+        "dnx-clr-win-x86.nuspec"
+      ]
     },
     "EntityFramework/6.1.3": {
       "type": "package",
@@ -7664,6 +7710,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "dnx-clr-win-x86 >= 1.0.0-rc1-update1",
       "EntityFramework.MicrosoftSqlServer >= 7.0.0-rc1-final",
       "Microsoft.AspNet.Diagnostics >= 1.0.0-rc1-final",
       "Microsoft.AspNet.IISPlatformHandler >= 1.0.0-rc1-final",
